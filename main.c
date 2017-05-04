@@ -7,7 +7,6 @@ int * createArray(int n)
   int i;
   int* a=(int*)calloc(n, sizeof(int)); //generate the random numbers
   srand(time(NULL));
-
   for (i=0; i<n; i++)
   {
     a[i]= rand() % 100 + 1;
@@ -28,7 +27,7 @@ int main() //main function
 
     printf("Starting Numbers:\n");
     for(i = 0; i < n; i++)
-      printf("%d\n", array[i]); //printing the numbers generated
+      printf("%d ", array[i]); //printing the numbers generated
     if (x=='b')
     {
       struct timeval t;
@@ -38,7 +37,7 @@ int main() //main function
       gettimeofday(&t,NULL);
       double finishTime=t.tv_sec+(t.tv_usec/1000000.0); //time of day after the test
       double executionTime = finishTime-initialTime; // Time after minus time before to get the time taken for the test
-      printf("Total Time:%.6f",executionTime);
+      printf("\nTotal Time:%.6f\n",executionTime);
     }
     else if (x=='m')
     {
@@ -49,7 +48,7 @@ int main() //main function
       gettimeofday(&t,NULL);
       double finishTime=t.tv_sec+(t.tv_usec/1000000.0); //time of day after the test
       double executionTime = finishTime-initialTime; // Time after minus time before to get the time taken for the test
-      printf("Total Time:%.6f",executionTime);
+      printf("\nTotal Time:%.6f\n",executionTime);
     }
     else if(x=='q')
     {
@@ -60,14 +59,14 @@ int main() //main function
       gettimeofday(&t,NULL);
       double finishTime=t.tv_sec+(t.tv_usec/1000000.0); //time of day after the test
       double executionTime = finishTime-initialTime; // Time after minus time before to get the time taken for the test
-      printf("Total Time:%.6f",executionTime);
+      printf("\nTotal Time:%.6f\n",executionTime);
     }
 
     printf("Sorted Numbers:\n");
     //output
     for(i = 0; i < n; i++)
 
-      printf("%d\n", array[i]); //print the numbers sorted into order
+      printf("%d ", array[i]); //print the numbers sorted into order
 
 
 
