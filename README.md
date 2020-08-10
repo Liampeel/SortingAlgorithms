@@ -2,11 +2,9 @@
 
 Benchmark 3 different sorting algorithms
 
-  Bubble sort
+	Bubble Sort
+
+	merge Sort
   
-  Merge sort
-  
-  quick sort
-  
- 
+	quick Sort
   
